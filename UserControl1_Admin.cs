@@ -24,13 +24,10 @@ namespace RAD_Project
 
         private void sdsd_Click(object sender, EventArgs e)
         {
-
+           
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -44,12 +41,14 @@ namespace RAD_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormController regcontroller = FormController.Instance; ;
-            regcontroller.hideAllUserControllers();
-            Control Acontroller = regcontroller.getUserControll("userControl1_Appoinmentnew");
-            Acontroller.Show();
-            Acontroller.BringToFront();
+                this.Hide();
+                FormController regcontroller = FormController.Instance; ;
+                regcontroller.hideAllUserControllers();
+                Control Acontroller = regcontroller.getUserControll("userControl1_Appoinmentnew");
+                Acontroller.Show();
+                Acontroller.BringToFront();
+
         }
+        
     }
 }
