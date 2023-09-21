@@ -35,12 +35,15 @@ namespace RAD_Project
         {
 
             SqlConnection cnn = connectDB();
+
+            cnn.Open();
             String query = "select * from Appoinment";
             SqlDataAdapter da = new SqlDataAdapter(query, cnn);
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             var ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
+            cnn.Close();
 
         }
         string toDeleteIndex;

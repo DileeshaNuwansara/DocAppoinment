@@ -39,23 +39,36 @@ namespace RAD_Project
             string qualification = txtqualification.Text;
             string hospital = txthospital.Text;
             string yearsofexp = txtyearsofexp.Text;
-
+            string date = txtdate.Text;
             SqlConnection cnn;
             cnn = connectDB();
             SqlCommand command;
-
-            String sql = "Insert into Doctor values('" + doctorid + "','" + name + "','" + gender + "','" + contactno + "','" + specialization + "','" + time + "','" + doctormln + "','" + qualification
-                + "','" + hospital + "','" + yearsofexp + "')";
+            cnn.Open();
+            String sql = "Insert into Doctor values('" + doctorid + "','" + name + "','" + gender + "','" + doctormln + "','"+qualification+"','"+hospital+"','" +yearsofexp + "','" +contactno+ "','" +specialization+ "','" +time+ "',,'" +date + "')";
 
             command = new SqlCommand(sql, cnn);
             command.ExecuteNonQuery();
             MessageBox.Show("Data inserted");
 
-            dataGridView1.Rows.Add(txtdoctorid.Text, txtname.Text, txtgender.Text, txtcontactno.Text, txttime.Text, txtdoctormln.Text, txtspecialization.Text, txtqualification.Text, txthospital.Text, txtyearsofexp.Text);
+            dataGridView1.Rows.Add(txtdoctorid.Text, txtname.Text, txtgender.Text, txtdoctormln.Text, txtcontactno.Text, txtqualification.Text, txthospital.Text, txtyearsofexp.Text, txtspecialization.Text,txttime.Text);
             cnn.Close();
+            populate();
 
             ClearTextBoxes(this);
 
+        }
+        private void populate()
+        {
+            SqlConnection cnn;
+            cnn = connectDB();
+            cnn.Open();
+            string query = "select * from Doctor";
+            SqlDataAdapter sda = new SqlDataAdapter(query, cnn);
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);
+            var ds = new DataSet();
+            sda.Fill(ds);   
+            dataGridView1.DataSource = ds.Tables[0];
+            cnn.Close();
         }
         private void ClearTextBoxes(Control control)
         {
@@ -69,31 +82,20 @@ namespace RAD_Project
             }
         }
 
-        private void Viewbutton1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void idelete()
-        {
-           /* foreach (DataGridView item in this.dataGridView1.SelectedRows)
-            {
-                dataGridView1.Rows.RemoveAt(item.Index);
-
-            }*/
-        }
+       
     private void Remove_Click(object sender, EventArgs e)
         {
             if (txtdoctorid.Text != "")
             {
                 string Doctor_id = txtdoctorid.Text;
                 SqlConnection cnn = connectDB();
-
-                string query = "delete from Doctor where Doctor_ID = '" + Doctor_id+ "' ";
+                cnn.Open();
+                string query = "delete from Doctor where Doctor_ID = '" + Doctor_id + "' ";
                 SqlCommand command;
                 command = new SqlCommand(query, cnn);
                 command.ExecuteNonQuery();
                 cnn.Close();
-                
+                populate();
 
                 MessageBox.Show("Doctor Record Deleted !!");
             }
@@ -104,6 +106,16 @@ namespace RAD_Project
             }
            //idelete();   
             
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

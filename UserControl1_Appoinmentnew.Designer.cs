@@ -37,19 +37,20 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt1
             // 
-            this.txt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt1.Location = new System.Drawing.Point(265, 12);
             this.txt1.Name = "txt1";
-            this.txt1.Size = new System.Drawing.Size(331, 30);
+            this.txt1.Size = new System.Drawing.Size(318, 34);
             this.txt1.TabIndex = 0;
             this.txt1.Text = "Appoinment Management";
             // 
@@ -59,7 +60,7 @@
             this.Viewbutton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Viewbutton1.Location = new System.Drawing.Point(86, 70);
             this.Viewbutton1.Name = "Viewbutton1";
-            this.Viewbutton1.Size = new System.Drawing.Size(181, 76);
+            this.Viewbutton1.Size = new System.Drawing.Size(212, 76);
             this.Viewbutton1.TabIndex = 1;
             this.Viewbutton1.Text = "View";
             this.Viewbutton1.UseVisualStyleBackColor = false;
@@ -71,7 +72,7 @@
             this.Removebutton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Removebutton2.Location = new System.Drawing.Point(446, 70);
             this.Removebutton2.Name = "Removebutton2";
-            this.Removebutton2.Size = new System.Drawing.Size(181, 76);
+            this.Removebutton2.Size = new System.Drawing.Size(190, 76);
             this.Removebutton2.TabIndex = 2;
             this.Removebutton2.Text = "Remove";
             this.Removebutton2.UseVisualStyleBackColor = false;
@@ -88,10 +89,11 @@
             this.Column3,
             this.Column4,
             this.Column5,
-            this.Column6,
             this.Column7,
             this.Column8,
-            this.Column9});
+            this.Column9,
+            this.Column6,
+            this.Column10});
             this.dataGridView1.Location = new System.Drawing.Point(0, 152);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -107,7 +109,7 @@
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
+            this.Column1.Width = 50;
             // 
             // Column2
             // 
@@ -115,7 +117,7 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 125;
+            this.Column2.Width = 50;
             // 
             // Column3
             // 
@@ -123,7 +125,7 @@
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 125;
+            this.Column3.Width = 60;
             // 
             // Column4
             // 
@@ -139,15 +141,7 @@
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Appoinment_Time";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 125;
+            this.Column5.Width = 50;
             // 
             // Column7
             // 
@@ -155,7 +149,7 @@
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 125;
+            this.Column7.Width = 90;
             // 
             // Column8
             // 
@@ -163,7 +157,7 @@
             this.Column8.MinimumWidth = 6;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 125;
+            this.Column8.Width = 90;
             // 
             // Column9
             // 
@@ -171,7 +165,22 @@
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 125;
+            this.Column9.Width = 90;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Appoinment_Time";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 60;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Doctor Name";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
             // 
             // UserControl1_Appoinmentnew
             // 
@@ -202,9 +211,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }
