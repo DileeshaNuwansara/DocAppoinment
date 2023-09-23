@@ -34,7 +34,7 @@ namespace RAD_Project
             this.Hide();
             FormController regcontroller = FormController.Instance; ;
             regcontroller.hideAllUserControllers();
-            Control Dcontroller = regcontroller.getUserControll("userControl1_Doctor");
+            Control Dcontroller = regcontroller.getUserControll("UserControl1_Doctor");
             Dcontroller.Show();
             Dcontroller.BringToFront();
         }
@@ -44,7 +44,7 @@ namespace RAD_Project
                 this.Hide();
                 FormController regcontroller = FormController.Instance; ;
                 regcontroller.hideAllUserControllers();
-                Control Acontroller = regcontroller.getUserControll("userControl1_Appoinmentnew");
+                Control Acontroller = regcontroller.getUserControll("UserControl1_Appoinmentnew");
                 Acontroller.Show();
                 Acontroller.BringToFront();
 
