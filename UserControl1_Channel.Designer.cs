@@ -47,7 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Name = "UserControl1_Channel";
-            this.Size = new System.Drawing.Size(781, 482);
+            this.Size = new System.Drawing.Size(784, 482);
             this.ResumeLayout(false);
             this.PerformLayout();
 

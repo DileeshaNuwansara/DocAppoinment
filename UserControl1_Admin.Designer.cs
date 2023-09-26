@@ -67,7 +67,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(192, 166);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            
             // 
             // button1
             // 
@@ -85,7 +84,7 @@
             this.button2.Font = new System.Drawing.Font("Berlin Sans FB Demi", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(433, 223);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(210, 116);
+            this.button2.Size = new System.Drawing.Size(213, 116);
             this.button2.TabIndex = 4;
             this.button2.Text = "Appoinment Management";
             this.button2.UseVisualStyleBackColor = true;
